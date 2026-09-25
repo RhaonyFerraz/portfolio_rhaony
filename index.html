@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhaony Moura Ferraz | Portfólio & Apresentação Executiva - Ciência de Dados, PCP & Controladoria SAP</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Portfólio profissional e Apresentação Executiva de Rhaony Moura Ferraz. Bacharelando em Ciência de Dados (UNIVESP), especialista em PCP, controle de custos industriais, gestão de compras e processos SAP.">
+    <meta name="author" content="Rhaony Moura Ferraz">
+    <meta property="og:title" content="Rhaony Moura Ferraz | Portfólio & Apresentação Executiva">
+    <meta property="og:description" content="Engenharia de dados, PCP industrial, custos, governança SAP e algoritmos em C WebAssembly.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Interativo: Partículas controladas pelo Motor C em WebAssembly -->
+    <canvas id="hero-canvas"></canvas>
+    
+    <!-- Luzes de Ambiente -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+
+
+
+    <main>
+        <!-- ==================================================================
+             HERO SECTION
+             ================================================================== -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge-c">
+                            
+                            <span>Apresentação Executiva • Processo Seletivo Nestlé (São José do Rio Pardo)</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Rhaony Moura Ferraz<br>
+                            <span class="text-gradient">Ciência de Dados, PCP</span> &amp;<br>
+                            Gestão &amp; Controladoria SAP.
+                        </h1>
+
+                        <div class="hero-tagline">
+                            <span class="tagline-chip">São José do Rio Pardo - SP</span>
+                            <span class="tagline-chip">Ciência de Dados (UNIVESP)</span>
+                            <span class="tagline-chip">PCP &amp; Custos</span>
+                            <span class="tagline-chip">Inglês Avançado (Irlanda)</span>
+                        </div>
+
+                        <div class="hero-desc" style="max-width: 680px;">
+                            <p style="margin-bottom: 12px;">
+                                Sou <strong>Rhaony Moura Ferraz</strong>, tenho 40 anos, sou casado há 5 anos e pai dedicado de um menino de 3 anos. Resido em <strong>São José do Rio Pardo - SP</strong>, cidade e região onde construí minhas raízes familiares e onde busco consolidar minha trajetória profissional.
+                            </p>
+                            <p style="margin-bottom: 12px;">
+                                Atualmente curso <strong>Bacharelado em Ciência de Dados na UNIVESP</strong> e possuo sólida vivência internacional de <strong>4 anos na Europa (Irlanda)</strong>, onde atuei na gestão de fluxos de comércio exterior usando <strong>SAP</strong> e aprimorei meu <strong>inglês para nível avançado</strong>.
+                            </p>
+                            <p style="margin-bottom: 14px;">
+                                Minha atuação profissional conecta com precisão o chão de fábrica ao fechamento de custos: tenho ampla experiência em <strong>Planejamento e Controle de Produção (PCP)</strong>, gestão de compras estratégicas, conferência fiscal de notas, negociação com fornecedores e governança operacional.
+                            </p>
+                            <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 12px; margin-top: 6px;">
+                                <strong>Habilidades e certificações:</strong><br>
+                                Gestão de processos • Kanban • Gravity Sticks Prototipagem em 3D • Marketing/ADS • Gestão comercial • Qualidade • Logística • MikroTik • VR Developer • Fiscal • SAP • Power BI • Solidity • JavaScript • HTML • CSS • PHP • SQL • C# • .NET • Python • Automação industrial • Excel • 5S • IA avançada
+                            </p>
+                        </div>
+
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h4 class="text-cyan mono">40 Anos</h4>
+                                <p>Família &amp; Determinação</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4 class="text-sap mono">Gestão</h4>
+                                <p>Custos e Processos</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4 class="text-emerald mono">UNIVESP</h4>
+                                <p>Ciência de Dados</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4 class="text-purple mono" style="color: var(--accent-purple);">Irlanda</h4>
+                                <p>4 Anos no Exterior</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slot de Foto Profissional -->
+                    <div class="hero-visual">
+                        <div class="portrait-wrapper">
+                            <div class="portrait-glow-ring"></div>
+                            <div class="portrait-card">
+                                <div class="portrait-placeholder" id="portrait-frame" style="padding: 0; border: none;">
+                                    <img src="assets/img/rhaony.jpg" alt="Rhaony Moura Ferraz" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: var(--radius-md);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             APRESENTAÇÃO EXECUTIVA (MODO PITCH 20 MINUTOS - NESTLÉ)
+             ================================================================== -->
+        <section class="presentation-section" id="apresentacao">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Apresentação Executiva</h2>
+                </div>
+
+                <div class="pres-wrapper" id="presentation-deck">
+                    <!-- Área de Visualização dos Conteúdos -->
+                    <div class="pres-slides-viewport">
+
+                        <!-- ==================== SLIDE 1 ==================== -->
+                        <div class="pres-slide active" id="slide-1">
+                            <div class="slide-title-block">
+                                <h3>
+                                    <span>Perfil Pessoal, Formação &amp; Trajetória Profissional</span>
+                                </h3>
+                            </div>
+
+                            <div class="slide1-grid">
+                                <!-- Bloco 1.1: Pessoal -->
+                                <div class="slide-box">
+                                    <div class="slide-box-header">
+                                        <h4>Pessoal (Nome, Idade, Família, Hobbies)</h4>
+                                    </div>
+                                    <ul class="personal-info-list">
+                                        <li>
+                                            <strong>Nome:</strong>
+                                            <span>Rhaony Moura Ferraz</span>
+                                        </li>
+                                        <li>
+                                            <strong>Idade:</strong>
+                                            <span>40 anos (Maturidade, estabilidade emocional e foco profissional)</span>
+                                        </li>
+                                        <li>
+                                            <strong>Local:</strong>
+                                            <span>São José do Rio Pardo - SP (Residência local, total disponibilidade para a fábrica)</span>
+                                        </li>
+                                        <li>
+                                            <strong>Família:</strong>
+                                            <span>Casado há 5 anos e pai dedicado de um menino de 3 anos — base familiar sólida e motivadora.</span>
+                                        </li>
+                                        <li>
+                                            <strong>Hobbies:</strong>
+                                            <div>
+                                                <span>Atividades que fortalecem foco, ritmo e bem-estar:</span>
+                                                <div class="hobby-chips">
+                                                    <span class="hobby-chip">Ciclismo &amp; Atividades ao Ar Livre</span>
+                                                    <span class="hobby-chip">Bateria e Percussão (Ritmo, Coordenação &amp; Disciplina)</span>
+                                                    <span class="hobby-chip">Música e Apreciação Instrumental</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Bloco 1.2: Formação & Ferramentas -->
+                                <div class="slide-box">
+                                    <div class="slide-box-header">
+                                        <h4>Formação &amp; Domínio de Informática</h4>
+                                    </div>
+                                    <ul class="personal-info-list">
+                                        <li>
+                                            <strong>Superior:</strong>
+                                            <span><strong>Bacharelado em Ciência de Dados</strong> — UNIVESP | Em andamento (Previsão: 2026/2027)</span>
+                                        </li>
+                                        <li>
+                                            <strong>Línguas:</strong>
+                                            <span><strong>Inglês Avançado</strong> (4 anos de vivência profissional na Irlanda + Business English pela Infinity School) • Espanhol Intermediário</span>
+                                        </li>
+                                        <li>
+                                            <strong>Cursos:</strong>
+                                            <span>Qualidade ISO 9001, Metodologia 5S, Kanban e Gestão de Fluxos Fabris</span>
+                                        </li>
+                                        <li>
+                                            <strong>Informática:</strong>
+                                            <div>
+                                                <div style="font-size: 0.88rem; color: #334155; line-height: 1.6;">
+                                                    • <strong>Excel Avançado:</strong> Dashboards complexos, fórmulas matriciais, conciliação e modelagem de custos.<br>
+                                                    • <strong>SAP:</strong> Rotinas de compras, PCP, requisições, conciliação contábil/fiscal e governança de transações.<br>
+                                                    • <strong>Power BI &amp; Python (Pandas/SQL):</strong> Tratamento analítico de grandes bases, pipelines ETL e indicadores de desempenho.<br>
+                                                    • <strong>PowerPoint:</strong> Storytelling executivo e estruturação de relatórios para tomada de decisão.
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ==================== SLIDE 2 ==================== -->
+                        <div class="pres-slide" id="slide-2">
+                            <div class="slide-title-block">
+                                <div>
+                                    <h3>
+                                        <span>Case de Impacto: Implantação de PCP &amp; Otimização de Compras e Custos (Uniopack)</span>
+                                    </h3>
+                                    <p>Projeto de liderança operacional com foco em melhoria de processos, análise de informações, tomada de decisão e otimização de recursos.</p>
+                                </div>
+                            </div>
+
+                            <div class="case-hero-card">
+                                <div class="case-hero-header">
+                                    <h4>Contexto do Projeto: Estruturação Operacional na Uniopack</h4>
+                                    <span class="tech-tag sap" style="font-size: 0.8rem;">PCP + Gestão de Compras + Custos</span>
+                                </div>
+                                <p class="case-hero-desc">
+                                    A Uniopack necessitava conectar de forma coesa a demanda de vendas, as ordens fabris e o abastecimento de matéria-prima. O projeto consistiu em assumir a gestão de compras e PCP, estabelecendo controles sistemáticos para eliminar desperdícios, padronizar compras e garantir fechamentos contábeis e de custos 100% confiáveis.
+                                </p>
+                            </div>
+
+                            <div class="case-pillars-grid">
+                                <!-- Pilar 1: Sua Atuação -->
+                                <div class="case-pillar-card atuacao">
+                                    <div class="case-pillar-title">
+                                        <h5>1. Minha Atuação</h5>
+                                    </div>
+                                    <ul class="case-pillar-list">
+                                        <li><strong>Estruturação do PCP:</strong> Desenho do cronograma de produção alinhado à capacidade instalada das máquinas e ao prazo de entrega de pedidos.</li>
+                                        <li><strong>Gestão Estratégica de Compras:</strong> Renegociação com fornecedores de insumos críticos com base em curva de demanda e lotes econômicos.</li>
+                                        <li><strong>Conciliação Fiscal e Operacional:</strong> Cruzamento diário de notas fiscais de entrada (NF-e) com pedidos de compra e ordens no estoque.</li>
+                                        <li><strong>Implementação de Sistema de Gestão:</strong> Digitalização de planilhas dispersas para um fluxo único de informação e geração de relatórios operacionais.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Pilar 2: Principais Desafios Enfrentados -->
+                                <div class="case-pillar-card desafios">
+                                    <div class="case-pillar-title">
+                                        <h5>2. Principais Desafios Enfrentados</h5>
+                                    </div>
+                                    <ul class="case-pillar-list">
+                                        <li><strong>Descompasso Chão de Fábrica x Suprimentos:</strong> Falta de previsibilidade gerava paradas não programadas por falta de insumo ou sobrecarga de estoque.</li>
+                                        <li><strong>Volatilidade de Preços de Insumos:</strong> Oscilação do mercado exigia agilidade na tomada de decisão e múltiplas cotações estruturadas.</li>
+                                        <li><strong>Discrepâncias Documentais:</strong> Divergências entre dados fiscais de notas e mercadorias físicas recebidas.</li>
+                                        <li><strong>Cultura Organizacional:</strong> Necessidade de treinar operadores e encarregados no preenchimento rigoroso de apontamentos do PCP.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Pilar 3: Resultados Obtidos -->
+                                <div class="case-pillar-card resultados">
+                                    <div class="case-pillar-title">
+                                        <h5>3. Resultados Obtidos</h5>
+                                    </div>
+                                    <ul class="case-pillar-list">
+                                        <li><strong>Previsibilidade e Eficiência no PCP:</strong> Aumento significativo da pontualidade nas entregas e redução drástica de ociosidade na fábrica.</li>
+                                        <li><strong>Economia e Margem Operacional:</strong> Redução nos custos de aquisição através de compras consolidadas e negociações com fornecedores homologados.</li>
+                                        <li><strong>Fechamento Ágil de Custos:</strong> Relatórios de fechamento de custos operacionais entregues com pontualidade e conciliação perfeita.</li>
+                                        <li><strong>Tomada de Decisão Data-Driven:</strong> Diretoria passou a ter visibilidade em tempo real de KPIs de estoque, compras e produtividade.</li>
+                                    </ul>
+                                    <div class="kpi-stat-chip">
+                                        Governança de Compras &amp; Controle de Custos Consolidado
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             EXPERIÊNCIA & SAP SECTION
+             ================================================================== -->
+        <section class="timeline-section" id="experiencia">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag sap">
+                        <span>Trajetória Corporativa</span>
+                    </span>
+                    <h2 class="section-title">Experiência Profissional &amp; Gestão</h2>
+                    <p class="section-subtitle">
+                        Histórico consolidado em indústrias e empresas multinacionais, atuando em PCP, custos, compras e análise de processos.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Item 1: Ferraz Embreagens -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <h3 class="company-title">Ferraz Embreagens</h3>
+                                <span class="timeline-period">2024 – 2026 (2 anos)</span>
+                            </div>
+                            <span class="role-badge">Análise de Processos • Setor Industrial / Automotivo</span>
+                            <p class="timeline-desc">
+                                Monitoramento constante de indicadores de desempenho operacional (KPIs) e apoio direto na implementação de novos sistemas internos de controle. Análise detalhada de materiais e controle de custos operacionais das rotinas de produção e distribuição.
+                            </p>
+                            <div class="tag-list">
+                                <span class="tech-tag c">Indicadores (KPIs)</span>
+                                <span class="tech-tag">Análise de Processos</span>
+                                <span class="tech-tag">Custos Operacionais</span>
+                                <span class="tech-tag">Sistemas Internos</span>
+                                <span class="tech-tag">Produção &amp; Distribuição</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Uniopack -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot sap"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <h3 class="company-title">Uniopack</h3>
+                                <span class="timeline-period">2022 – 2024 (2 anos)</span>
+                            </div>
+                            <span class="role-badge" style="background: rgba(37,99,235,0.15); border-color: rgba(59,130,246,0.3); color: #60a5fa;">Gestão de Processos e Compras / PCP • Embalagens Industriais</span>
+                            <p class="timeline-desc">
+                                Atuação direta no Planejamento e Controle de Produção (PCP), acompanhamento sistemático de custos e elaboração de relatórios operacionais. Negociação estratégica com fornecedores, controle de ordens de compra (OC) e conciliação de documentações fiscais/operacionais. Implementação de sistemas de gestão para otimização do fluxo de informações e controle de dados.
+                            </p>
+                            <div class="tag-list">
+                                <span class="tech-tag sap">PCP Industrial</span>
+                                <span class="tech-tag sap">Gestão de Compras</span>
+                                <span class="tech-tag sap">Controle de Custos</span>
+                                <span class="tech-tag">Negociação com Fornecedores</span>
+                                <span class="tech-tag">Conciliação Fiscal</span>
+                                <span class="tech-tag">Sistemas de Gestão</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Bridge Trade (Irlanda) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: var(--accent-purple); box-shadow: 0 0 15px rgba(168,85,247,0.5);"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <h3 class="company-title">Bridge Trade (Irlanda)</h3>
+                                <span class="timeline-period">2018 – 2022 (4 anos)</span>
+                            </div>
+                            <span class="role-badge" style="background: rgba(168,85,247,0.15); border-color: rgba(168,85,247,0.3); color: var(--accent-purple);">Gestão de Projetos e Fluxos • Comércio Internacional &amp; Logística</span>
+                            <p class="timeline-desc">
+                                Atuação direta na Europa gerenciando operações internacionais em língua inglesa. Mapeamento de processos, tratamento e análise de dados de projetos e despachos internacionais. Organização documental e controle de conformidade (compliance) para operações logísticas e financeiras internacionais.
+                            </p>
+                            <div class="tag-list">
+                                <span class="tech-tag" style="border-color: rgba(168,85,247,0.4); color: var(--accent-purple);">Inglês Fluente / Negócios</span>
+                                <span class="tech-tag">Mapeamento de Processos</span>
+                                <span class="tech-tag">Despachos Internacionais</span>
+                                <span class="tech-tag">Compliance Logístico</span>
+                                <span class="tech-tag">Tratamento de Dados</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Têxtil União -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <h3 class="company-title">Têxtil União</h3>
+                                <span class="timeline-period">2015 – 2017 (2 anos)</span>
+                            </div>
+                            <span class="role-badge">Apoio Administrativo / PCP • Setor Têxtil Industrial</span>
+                            <p class="timeline-desc">
+                                Suporte operacional no tratamento e conciliação de notas fiscais, conferência de documentação de fornecedores e rotinas de arquivo e fechamento. Auxílio direto na implementação do sistema de qualidade ISO 9001 e na metodologia 5S para organização e padronização do ambiente fabril.
+                            </p>
+                            <div class="tag-list">
+                                <span class="tech-tag">Tratamento de Notas Fiscais</span>
+                                <span class="tech-tag">Sistema ISO 9001</span>
+                                <span class="tech-tag">Metodologia 5S</span>
+                                <span class="tech-tag">Apoio PCP</span>
+                                <span class="tech-tag">Conferência Fornecedores</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================================================================
+             CONTATO & REFERÊNCIAS PROFISSIONAIS
+             ================================================================== -->
+        <section class="contact-section" id="contato">
+            <div class="container">
+                <div class="contact-card">
+                    <span class="section-tag">
+                        <span>Contato Direto</span>
+                    </span>
+                    <h2>Vamos Conversar sobre Oportunidades &amp; Desafios?</h2>
+                    <p>
+                        Totalmente disponível para processos seletivos e entrevistas na unidade <strong>Nestlé de São José do Rio Pardo - SP</strong>. Seja para Finanças, Controladoria, PCP ou Inteligência de Processos, estou pronto para somar.
+                    </p>
+
+                    <div style="margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: var(--accent-cyan);">
+                        São José do Rio Pardo - SP, Brasil • WhatsApp: (11) 99869-5746 • E-mail: rhaonyferraz@hotmail.com
+                    </div>
+
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/5511998695746" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25d366; color: #060911; font-weight: 700;">
+                            <span>Conversar no WhatsApp</span>
+                        </a>
+                        <button class="btn btn-secondary" id="btn-copy-email">
+                            <span>Copiar Meu E-mail</span>
+                        </button>
+                        <a href="#apresentacao" class="btn btn-sap">
+                            <span>Revisar Apresentação (20 min)</span>
+                        </a>
+                    </div>
+
+                    <!-- Cartões de Referências Profissionais Reais -->
+                    <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 30px; text-align: left;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                            
+                            <h3 style="font-size: 1.15rem; color: var(--text-highlight);">Referências Profissionais Disponíveis</h3>
+                        </div>
+                        <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 16px;">
+                            Líderes e gestores que acompanharam de perto minha postura ética, dedicação operacional e rigor técnico:
+                        </p>
+
+                        <div class="references-grid">
+                            <div class="ref-card">
+                                <div class="ref-name">Tristan M.</div>
+                                <div class="ref-role">CEO • Bridge Trade (Irlanda)</div>
+                                <div class="ref-contact">+353 85 744-1805</div>
+                            </div>
+                            <div class="ref-card">
+                                <div class="ref-name">Dr. Reginaldo Arthus</div>
+                                <div class="ref-role">Reitor • UNIFEG</div>
+                                <div class="ref-contact">+55 35 3551-5267</div>
+                            </div>
+                            <div class="ref-card">
+                                <div class="ref-name">Gilmar M.</div>
+                                <div class="ref-role">Gestor • Têxtil União</div>
+                                <div class="ref-contact">+55 35 9121-5415</div>
+                            </div>
+                            <div class="ref-card">
+                                <div class="ref-name">Raul Costa</div>
+                                <div class="ref-role">Gerente • Federação Paulista de Tênis</div>
+                                <div class="ref-contact">(11) 98297-9778</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>© 2026 Rhaony. Construído com <strong>Linguagem C (WebAssembly)</strong>, HTML5 e CSS puro.</p>
+                    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+                        Otimizado e 100% autônomo para execução no <strong>GitHub Pages</strong>.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#hero">Início</a>
+                    <a href="#apresentacao">Apresentação</a>
+                    <a href="#experiencia">Experiência</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-msg" id="toast-msg">
+        
+        <span id="toast-text">E-mail copiado para a área de transferência!</span>
+    </div>
+
+    <!-- Scripts em ordem lógica -->
+    <script src="js/wasm_engine.js"></script>
+    <script src="js/particle_canvas.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
