@@ -193,6 +193,90 @@ section {
 
 
 /* ==========================================================================
+   TOP NAVIGATION BAR (Marca & Ação Gerar PDF)
+   ========================================================================== */
+.top-nav-bar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 60, 0.08);
+    z-index: 1000;
+    transition: var(--transition-normal);
+}
+
+.top-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.top-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--text-highlight);
+}
+
+.top-nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+}
+
+.brand-divider {
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.brand-subtitle {
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.top-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-pdf-export {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    color: #ffffff;
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    padding: 8px 18px;
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.25);
+    transition: var(--transition-fast);
+}
+
+.btn-pdf-export:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.38);
+    transform: translateY(-1px);
+}
+
+.btn-pdf-export:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
    HERO SECTION
    ========================================================================== */
 .hero {
@@ -2397,4 +2481,318 @@ section {
         padding: 2px 8px;
     }
 }
+
+/* ---------- Top Nav Mobile Adjustments ---------- */
+@media (max-width: 768px) {
+    .top-nav-container {
+        padding: 0 16px;
+        height: 54px;
+    }
+
+    .brand-subtitle,
+    .brand-divider {
+        display: none;
+    }
+
+    .btn-pdf-export {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+}
+
+/* ==========================================================================
+   PRINT / PDF GENERATION SYSTEM
+   Configurado para exportação A4 de alta fidelidade
+   ========================================================================== */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 10mm 12mm;
+    }
+
+    /* Força cores exatas de fundo e bordas na impressão / PDF */
+    *, *::before, *::after {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 10pt !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Oculta elementos estritamente interativos no PDF */
+    .top-nav-bar,
+    #hero-canvas,
+    .ambient-glow,
+    .toast-msg,
+    .footer {
+        display: none !important;
+    }
+
+    /* Seções principais */
+    section {
+        padding: 15px 0 !important;
+        page-break-after: auto;
+    }
+
+    .hero {
+        min-height: auto !important;
+        padding: 10px 0 25px 0 !important;
+        page-break-after: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1.35fr 0.65fr !important;
+        gap: 24px !important;
+        text-align: left !important;
+    }
+
+    .hero-visual {
+        order: unset !important;
+    }
+
+    .portrait-wrapper {
+        width: 170px !important;
+        margin: 0 auto;
+    }
+
+    .portrait-glow-ring {
+        display: none !important;
+    }
+
+    .hero-title {
+        font-size: 20pt !important;
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-badge-c {
+        border: 1px solid #cbd5e1 !important;
+        background: #f8fafc !important;
+        color: #1e293b !important;
+        font-size: 8pt !important;
+        padding: 4px 10px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .hero-tagline {
+        background: #f1f5f9 !important;
+        padding: 6px 10px !important;
+        margin-bottom: 14px !important;
+        gap: 6px !important;
+    }
+
+    .tagline-chip {
+        border: 1px solid #cbd5e1 !important;
+        background: #ffffff !important;
+        color: #1e293b !important;
+        font-size: 8pt !important;
+        padding: 2px 8px !important;
+    }
+
+    .hero-desc {
+        font-size: 9.5pt !important;
+        line-height: 1.5 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero-stats {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 10px !important;
+        padding-top: 12px !important;
+        border-top: 1px solid #e2e8f0 !important;
+    }
+
+    .stat-item {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        padding: 6px 8px !important;
+        text-align: center !important;
+        border-radius: 6px !important;
+    }
+
+    .stat-item h4 {
+        font-size: 11pt !important;
+    }
+
+    .stat-item p {
+        font-size: 7.5pt !important;
+    }
+
+    /* Seção de Apresentação Executiva */
+    .presentation-section {
+        padding-top: 10px !important;
+        page-break-before: auto;
+    }
+
+    .section-title {
+        font-size: 16pt !important;
+        margin-bottom: 10px !important;
+        color: #0f172a !important;
+    }
+
+    .pres-wrapper {
+        border: 1px solid #cbd5e1 !important;
+        background: #ffffff !important;
+        border-radius: 8px !important;
+    }
+
+    .pres-slides-viewport {
+        padding: 18px !important;
+        gap: 22px !important;
+    }
+
+    .slide-title-block {
+        margin-bottom: 14px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .slide-title-block h3 {
+        font-size: 13pt !important;
+    }
+
+    .slide1-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px !important;
+    }
+
+    .slide-box {
+        border: 1px solid #e2e8f0 !important;
+        background: #f8fafc !important;
+        padding: 14px !important;
+        border-radius: 6px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .slide-box-header h4 {
+        font-size: 10pt !important;
+    }
+
+    .personal-info-list li {
+        font-size: 9pt !important;
+        gap: 6px !important;
+        line-height: 1.4 !important;
+    }
+
+    .case-hero-card {
+        border: 1px solid #cbd5e1 !important;
+        background: #f8fafc !important;
+        padding: 14px !important;
+        margin-bottom: 14px !important;
+        border-radius: 6px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .case-hero-header h4 {
+        font-size: 10.5pt !important;
+    }
+
+    .case-hero-desc {
+        font-size: 9pt !important;
+        line-height: 1.45 !important;
+    }
+
+    .case-pillars-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .case-pillar-card {
+        border: 1px solid #e2e8f0 !important;
+        background: #ffffff !important;
+        padding: 12px !important;
+        border-radius: 6px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .case-pillar-title h5 {
+        font-size: 9pt !important;
+    }
+
+    .case-pillar-list li {
+        font-size: 8pt !important;
+        line-height: 1.4 !important;
+    }
+
+    .kpi-stat-chip {
+        font-size: 8pt !important;
+        padding: 6px !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #1e40af !important;
+    }
+
+    /* Seção de Experiência / Timeline */
+    .timeline-section {
+        page-break-before: always;
+        padding-top: 15px !important;
+    }
+
+    .timeline {
+        padding-left: 24px !important;
+    }
+
+    .timeline::before {
+        left: 6px !important;
+        background: #cbd5e1 !important;
+    }
+
+    .timeline-dot {
+        left: -22px !important;
+        width: 10px !important;
+        height: 10px !important;
+        border-color: #2563eb !important;
+    }
+
+    .timeline-card {
+        border: 1px solid #e2e8f0 !important;
+        background: #ffffff !important;
+        padding: 14px !important;
+        margin-bottom: 14px !important;
+        border-radius: 6px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    .company-title {
+        font-size: 11pt !important;
+    }
+
+    .timeline-period {
+        font-size: 8.5pt !important;
+    }
+
+    .role-badge {
+        font-size: 8pt !important;
+        padding: 2px 8px !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #1e40af !important;
+    }
+
+    .timeline-desc {
+        font-size: 8.8pt !important;
+        line-height: 1.45 !important;
+    }
+
+    .tag-list .tech-tag {
+        border: 1px solid #cbd5e1 !important;
+        background: #f8fafc !important;
+        color: #334155 !important;
+        font-size: 7.5pt !important;
+        padding: 2px 6px !important;
+    }
+}
+
 
