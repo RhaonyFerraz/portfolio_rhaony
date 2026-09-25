@@ -2165,32 +2165,65 @@ section {
 @media (max-width: 480px) {
 
     .container {
-        padding: 0 12px;
+        padding: 0 14px;
     }
 
     section {
-        padding: 48px 0;
+        padding: 44px 0;
     }
 
     .hero {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 
     .hero-title {
-        font-size: 1.8rem;
-        line-height: 1.2;
+        font-size: 1.75rem;
+        line-height: 1.22;
     }
 
     .hero-badge-c {
         font-size: 0.72rem;
-        padding: 5px 10px;
+        padding: 6px 10px;
+        line-height: 1.35;
+    }
+
+    .hero-tagline {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+
+    .tagline-chip {
+        white-space: normal;
+        text-align: center;
+        font-size: 0.76rem;
+        padding: 4px 10px;
+    }
+
+    .hero-desc {
+        font-size: 0.94rem;
+        line-height: 1.65;
+        word-break: break-word;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 18px;
+        font-size: 0.92rem;
     }
 
     .hero-stats {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 14px;
+        gap: 12px;
         width: 100%;
     }
 
@@ -2198,26 +2231,31 @@ section {
         background: rgba(37, 99, 235, 0.04);
         border: 1px solid rgba(37, 99, 235, 0.1);
         border-radius: 10px;
-        padding: 10px 12px;
+        padding: 10px 8px;
         text-align: center;
     }
 
     .stat-item h4 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .stat-item p {
-        font-size: 0.72rem;
+        font-size: 0.7rem;
     }
 
     .section-title {
-        font-size: 1.55rem;
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
     }
 
     .section-tag {
-        font-size: 0.72rem;
-        padding: 5px 12px;
-        letter-spacing: 0.8px;
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        letter-spacing: 0.6px;
     }
 
     .portrait-wrapper {
@@ -2227,36 +2265,74 @@ section {
     /* Presentation slides */
     .pres-slides-viewport {
         padding: 16px 12px;
-        gap: 28px;
+        gap: 24px;
     }
 
     .slide-box {
         padding: 14px 12px;
     }
 
+    .personal-info-list li {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.88rem;
+    }
+
+    .personal-info-list strong {
+        min-width: unset;
+        color: var(--accent-sap);
+    }
+
     .case-hero-card {
         padding: 16px 12px;
     }
 
+    .case-hero-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .case-pillar-card {
+        padding: 16px 12px;
+    }
+
+    .case-pillar-list li {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
     /* Timeline */
     .timeline {
-        padding-left: 18px;
+        padding-left: 20px;
+    }
+
+    .timeline::before {
+        left: 4px;
     }
 
     .timeline-dot {
-        left: -15px;
+        left: -20px;
+        width: 10px;
+        height: 10px;
     }
 
     .timeline-card {
         padding: 16px 12px;
+        word-break: break-word;
+    }
+
+    .timeline-desc {
+        font-size: 0.88rem;
+        line-height: 1.6;
     }
 
     /* Role badge */
     .role-badge {
-        font-size: 0.75rem;
-        padding: 4px 10px;
+        font-size: 0.72rem;
+        padding: 4px 8px;
         white-space: normal;
-        line-height: 1.4;
+        line-height: 1.35;
     }
 
     /* Footer */
@@ -2274,28 +2350,51 @@ section {
     .pres-wrapper {
         border-radius: 10px;
     }
+
+    .toast-msg {
+        left: 16px;
+        right: 16px;
+        transform: none;
+        max-width: calc(100% - 32px);
+        font-size: 0.82rem;
+    }
 }
 
 /* ---------- 360px: Tiny Phones ---------- */
 @media (max-width: 360px) {
 
     .hero-title {
-        font-size: 1.55rem;
+        font-size: 1.5rem;
     }
 
     .hero-badge-c span {
-        font-size: 0.68rem;
+        font-size: 0.65rem;
     }
 
     .section-title {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
     }
 
     .portrait-wrapper {
-        width: 150px;
+        width: 140px;
     }
 
     .hero-stats {
         grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .stat-item {
+        padding: 8px 4px;
+    }
+
+    .stat-item h4 {
+        font-size: 1rem;
+    }
+
+    .tag-list .tech-tag {
+        font-size: 0.7rem;
+        padding: 2px 8px;
     }
 }
+
