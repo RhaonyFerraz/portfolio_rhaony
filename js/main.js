@@ -204,6 +204,22 @@
         }, 3200);
     }
 
+    // 8.1 Exportação de PDF Robusta (Desktop e Mobile)
+    const btnPdfExport = document.getElementById('btn-pdf-export');
+    if (btnPdfExport) {
+        const triggerPrint = (e) => {
+            if (e) e.preventDefault();
+            try {
+                window.print();
+            } catch (err) {
+                console.warn('Erro ao acionar window.print():', err);
+                showToast('Dica: Use a opção Compartilhar/Imprimir do navegador para salvar em PDF.');
+            }
+        };
+
+        btnPdfExport.addEventListener('click', triggerPrint);
+    }
+
     // =========================================================================
     // 9. Nestlé Interview - Presentation Engine (20 Minutos)
     // =========================================================================

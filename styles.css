@@ -201,11 +201,11 @@ section {
     left: 0;
     right: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.90);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(15, 23, 60, 0.08);
-    z-index: 1000;
+    z-index: 9999;
     transition: var(--transition-normal);
 }
 
@@ -214,6 +214,7 @@ section {
     align-items: center;
     justify-content: space-between;
     height: 60px;
+    gap: 12px;
 }
 
 .top-nav-brand {
@@ -223,11 +224,20 @@ section {
     font-size: 0.94rem;
     font-weight: 700;
     color: var(--text-highlight);
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+.brand-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .top-nav-dot {
     width: 8px;
     height: 8px;
+    min-width: 8px;
     border-radius: 50%;
     background: var(--accent-blue);
     box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
@@ -248,11 +258,13 @@ section {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .btn-pdf-export {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
     color: #ffffff;
@@ -264,6 +276,13 @@ section {
     cursor: pointer;
     box-shadow: 0 2px 10px rgba(37, 99, 235, 0.25);
     transition: var(--transition-fast);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .btn-pdf-export:hover {
@@ -2485,19 +2504,46 @@ section {
 /* ---------- Top Nav Mobile Adjustments ---------- */
 @media (max-width: 768px) {
     .top-nav-container {
-        padding: 0 16px;
-        height: 54px;
+        padding: 0 14px;
+        height: 52px;
     }
 
     .brand-subtitle,
     .brand-divider {
-        display: none;
+        display: none !important;
+    }
+
+    .brand-name {
+        font-size: 0.86rem;
     }
 
     .btn-pdf-export {
         padding: 6px 12px;
-        font-size: 0.8rem;
-        gap: 6px;
+        font-size: 0.78rem;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 420px) {
+    .top-nav-container {
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .brand-name {
+        font-size: 0.78rem;
+        max-width: 135px;
+    }
+
+    .btn-pdf-export {
+        padding: 6px 9px;
+        font-size: 0.74rem;
+        gap: 4px;
+    }
+
+    .btn-pdf-export svg {
+        width: 14px;
+        height: 14px;
     }
 }
 
