@@ -1907,21 +1907,19 @@ section {
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
+
+/* ---------- 992px: Tablet Landscape ---------- */
 @media (max-width: 992px) {
-    .slide1-grid {
-        grid-template-columns: 1fr;
+
+    .container {
+        padding: 0 24px;
     }
 
-    .case-pillars-grid {
-        grid-template-columns: 1fr;
+    section {
+        padding: 80px 0;
     }
 
-    .fit-nestle-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 992px) {
+    /* Hero */
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1935,6 +1933,7 @@ section {
     .hero-desc {
         margin-left: auto;
         margin-right: auto;
+        text-align: left;
     }
 
     .hero-actions {
@@ -1943,29 +1942,360 @@ section {
 
     .hero-stats {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
+    .hero-visual {
+        order: -1;
+    }
+
+    .portrait-wrapper {
+        width: 280px;
+    }
+
+    /* Presentation */
+    .slide1-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fit-nestle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Playground */
     .playground-grid {
         grid-template-columns: 1fr;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
-
+/* ---------- 768px: Tablet Portrait / Large Mobile ---------- */
 @media (max-width: 768px) {
 
+    .container {
+        padding: 0 16px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    /* Typography */
     .hero-title {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-badge-c {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-desc {
+        font-size: 0.97rem;
+        max-width: 100% !important;
+    }
+
+    .hero-stats {
+        gap: 16px;
+    }
+
+    .stat-item h4 {
+        font-size: 1.4rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
+    .section-subtitle {
+        font-size: 0.97rem;
+    }
+
+    .section-header {
+        margin-bottom: 48px;
+    }
+
+    /* Portrait */
+    .portrait-wrapper {
+        width: 220px;
+    }
+
+    /* Tagline chips */
+    .hero-tagline {
+        gap: 8px;
+    }
+
+    .tagline-chip {
+        font-size: 0.78rem;
+        padding: 5px 12px;
+    }
+
+    /* Presentation */
+    .pres-header-bar {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .pres-slides-viewport {
+        padding: 20px 16px;
+    }
+
+    .slide-title-block h3 {
+        font-size: 1.1rem;
+    }
+
+    .slide-box-header h4 {
+        font-size: 0.95rem;
+    }
+
+    .pres-footer-bar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        text-align: center;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 24px;
+    }
+
+    .timeline-dot {
+        left: -20px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-card {
+        padding: 20px 16px;
+    }
+
+    .timeline-meta {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+
+    .timeline-period {
+        font-size: 0.8rem;
+    }
+
+    .company-title {
+        font-size: 1.1rem;
+    }
+
+    .tag-list {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+
+    /* Case Pillar Cards */
+    .case-pillar-card {
+        padding: 18px 14px;
+    }
+
+    /* Slides mini-job cards */
+    .mini-job-card {
+        padding: 14px;
+    }
+
+    /* KPI chip */
+    .kpi-stat-chip {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+
+    /* Contact */
     .contact-card {
-        padding: 40px 20px;
+        padding: 32px 16px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .contact-buttons .btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .references-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-left p {
+        font-size: 0.82rem;
+    }
+}
+
+/* ---------- 480px: Small Mobile ---------- */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 48px 0;
+    }
+
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .hero-badge-c {
+        font-size: 0.72rem;
+        padding: 5px 10px;
+    }
+
+    .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .stat-item {
+        background: rgba(37, 99, 235, 0.04);
+        border: 1px solid rgba(37, 99, 235, 0.1);
+        border-radius: 10px;
+        padding: 10px 12px;
+        text-align: center;
+    }
+
+    .stat-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.72rem;
+    }
+
+    .section-title {
+        font-size: 1.55rem;
+    }
+
+    .section-tag {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+        letter-spacing: 0.8px;
+    }
+
+    .portrait-wrapper {
+        width: 180px;
+    }
+
+    /* Presentation slides */
+    .pres-slides-viewport {
+        padding: 16px 12px;
+        gap: 28px;
+    }
+
+    .slide-box {
+        padding: 14px 12px;
+    }
+
+    .case-hero-card {
+        padding: 16px 12px;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 18px;
+    }
+
+    .timeline-dot {
+        left: -15px;
+    }
+
+    .timeline-card {
+        padding: 16px 12px;
+    }
+
+    /* Role badge */
+    .role-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    /* Footer */
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .pres-wrapper {
+        border-radius: 10px;
+    }
+}
+
+/* ---------- 360px: Tiny Phones ---------- */
+@media (max-width: 360px) {
+
+    .hero-title {
+        font-size: 1.55rem;
+    }
+
+    .hero-badge-c span {
+        font-size: 0.68rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .portrait-wrapper {
+        width: 150px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
     }
 }
